@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package pbm_test;
+
+message Msg {
+  optional float o_float = 1;
+  optional uint64 o_uint64 = 2;
+  optional string o_string = 3;
+}
