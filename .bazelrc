@@ -1,0 +1,17 @@
+# Do not show warnings from external dependencies.
+build --output_filter="^//"
+
+# Work around the sandbox issue.
+build --spawn_strategy=standalone
+
+# Specify protobuf cc toolchain
+build --proto_toolchain_for_cc="@com_google_protobuf//:cc_toolchain"
+
+build --crosstool_top=crosstool:toolchain
+
+build --copt="-g"
+build --copt="-Wall"
+build --copt="-Werror"
+
+build --strip=never
+
